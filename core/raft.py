@@ -16,7 +16,7 @@ class RAFT(
     nn.Module,
     PyTorchModelHubMixin, 
     # optionally, you can add metadata which gets pushed to the model card
-    repo_url="https://github.com/princeton-vl/SEA-RAFT",
+    repo_url="https://github.com/kefrobotics/SEA-RAFT",
     pipeline_tag="optical-flow-estimation",
     license="bsd-3-clause",
 ):
