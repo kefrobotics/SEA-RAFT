@@ -1,22 +1,18 @@
-import sys
-sys.path.append('core')
+
 import argparse
 import os
 import cv2
-import math
 import numpy as np
 
 import torch
-import torch.nn as nn
 import torch.nn.functional as F
-import torch.utils.data as data
 
 from config.parser import parse_args
 
-import datasets
-from raft import RAFT
-from utils.flow_viz import flow_to_image
-from utils.utils import load_ckpt
+# import datasets
+from searaft.raft import RAFT
+from searaft.utils.flow_viz import flow_to_image
+from searaft.utils.utils import load_ckpt
 
 def create_color_bar(height, width, color_map):
     """
@@ -79,6 +75,7 @@ def get_heatmap(info, args):
 def forward_flow(args, model, image1, image2):
     output = model(image1, image2, iters=args.iters, test_mode=True)
     flow_final = output['flow'][-1]
+    print(flow_final.shape, image1.shape)
     info_final = output['info'][-1]
     return flow_final, info_final
 

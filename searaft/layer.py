@@ -3,8 +3,6 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 import torch
-import math
-from torch.nn import Module, Dropout
 
 ### Gradient Clipping and Zeroing Operations ###
 

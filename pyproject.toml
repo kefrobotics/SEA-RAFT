@@ -1,0 +1,25 @@
+[project]
+name = "searaft"
+version = "0.1.0"
+description = "KEF SEA-RAFT implementation for evaluation"
+authors = [
+    {name = "jhandKEF",email = "jared@kefrobotics.com"}
+]
+license = {text = "BSD 3-Clause License"}
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch",
+    "torchvision",
+    "numpy",
+    "h5py",
+    "opencv-python",
+    "pillow",
+    "numpy",
+    "scipy"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
